@@ -1,0 +1,11 @@
+--- tiki-module_controls.php	2008-07-14 15:35:24.000000000 -0300
++++ tiki-module_controls.php	2008-08-27 19:27:21.000000000 -0300
+@@ -60,7 +60,7 @@
+ 
+ // Fix locaton if parameter was removed...
+ if ($url != $_SERVER["REQUEST_URI"]) header('location: '.$url);
+-
++include_once('gambi_nomes.php');
+ $smarty->assign('current_location', $url);
+ $smarty->assign('mpchar', (strpos($url, '?') ? '&' : '?'));
+ 

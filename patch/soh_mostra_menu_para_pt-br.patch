@@ -1,0 +1,11 @@
+--- templates/tiki.tpl	2008-07-10 13:45:58.000000000 -0300
++++ templates/tiki.tpl	2008-07-15 15:28:00.000000000 -0300
+@@ -23,7 +23,7 @@
+   <table id="tiki-midtbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+     <tr>
+ 	{if $prefs.feature_fullscreen != 'y' or $smarty.session.fullscreen != 'y'}
+-      {if $prefs.feature_left_column ne 'n' && $left_modules|@count > 0 && $show_columns.left_modules ne 'n'}
++      {if $prefs.feature_left_column ne 'n' && $left_modules|@count > 0 && $show_columns.left_modules ne 'n' && ($prefs.language eq 'pt-br' || $tiki_p_admin eq 'y')}
+       <td id="leftcolumn" valign="top"
+ 			{if $prefs.feature_left_column eq 'user'} 
+ 			style="display:{if isset($cookie.show_leftcolumn) and $cookie.show_leftcolumn ne 'y'}none{else}table-cell;_display:block{/if};"

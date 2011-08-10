@@ -1,0 +1,10 @@
+--- webcalendar/includes/connect.php	2005-02-07 23:35:44.000000000 -0200
++++ webcalendar/includes/connect.php	2008-09-09 16:20:14.000000000 -0300
+@@ -14,6 +14,7 @@
+ // If not, do it now.
+ if ( empty ( $c ) ) {
+   $c = dbi_connect ( $db_host, $db_login, $db_password, $db_database );
++  dbi_query('SET NAMES utf8');
+   if ( ! $c ) {
+     die_miserable_death (
+       "Error connecting to database:<blockquote>" .

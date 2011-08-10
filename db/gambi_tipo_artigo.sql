@@ -1,0 +1,1 @@
+UPDATE tiki_article_types SET type = 'Artigo' WHERE type = 'Article';

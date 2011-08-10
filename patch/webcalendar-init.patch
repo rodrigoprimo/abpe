@@ -1,0 +1,18 @@
+--- webcalendar/includes/init.php	2008-12-02 22:32:47.000000000 -0200
++++ webcalendar/includes/init.php	2008-12-02 22:40:21.000000000 -0200
+@@ -36,10 +36,14 @@
+  *
+  * @version $Id: init.php,v 1.53.2.1 2005/07/14 23:00:37 cknudsen Exp $
+  * @package WebCalendar
+-
+  *
+  */
+ 
++session_start();
++if (empty($_SESSION['u_info']['login']) && $_SESSION['u_info']['groups'] != 'Admins') {
++    header('Location: ../tiki-login.php');
++}
++
+ // Security Check
+ if ( empty ( $PHP_SELF ) && ! empty ( $_SERVER ) &&
+   ! empty ( $_SERVER['PHP_SELF'] ) ) {

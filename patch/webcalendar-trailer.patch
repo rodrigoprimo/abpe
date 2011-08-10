@@ -1,0 +1,25 @@
+--- webcalendar/includes/trailer.php	2008-12-02 22:44:45.000000000 -0200
++++ webcalendar/includes/trailer.php	2008-12-02 22:52:14.000000000 -0200
+@@ -369,7 +369,7 @@
+  if ( strlen ( $login ) && $login != "__public__" ) {
+   echo "<span class=\"prefix\">" .
+    translate("Current User") . ":</span>&nbsp;$fullname&nbsp;(<a title=\"" . 
+-   translate("Logout") . "\" href=\"$login_url\">" . 
++   translate("Logout") . "\" href=\"../tiki-logout.php\">" . 
+    translate("Logout") . "</a>)\n";
+  } else {
+   echo "<span class=\"prefix\">" .
+@@ -389,13 +389,6 @@
+   if ( ! empty ( $admincals[0] ) ) {
+     $grouplist = array_merge ( $admincals, $grouplist );
+   }
+-  if ( $is_admin && $public_access == 'Y' ) {
+-    $public = array (
+-      "cal_login" => "__public__",
+-      "cal_fullname" => translate ( "Public Access" )
+-    );
+-    array_unshift ( $grouplist, $public );
+-  }
+   $groups = "";
+   for ( $i = 0; $i < count ( $grouplist ); $i++ ) {
+     $l = $grouplist[$i]['cal_login'];

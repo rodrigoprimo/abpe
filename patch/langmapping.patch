@@ -1,0 +1,10 @@
+--- lang/langmapping.php	2008-05-27 11:39:15.000000000 -0300
++++ lang/langmapping.php	2008-05-27 11:39:43.000000000 -0300
+@@ -20,6 +20,7 @@
+     'de' => array(  'Deutsch',      tra("German")       ),
+     'en' => array(  'English',      tra("English")      ),
+     'en-uk' => array( 'English British',  tra("English British")	),
++    'eo' => array(  'Esperanto',     tra("Esperanto")      ),
+     'es' => array(  'Español',     tra("Spanish")      ),
+     'el' => array(  'Greek',        tra("Greek")        ),
+     'fa' => array(  'فارسي',        tra("Farsi")        ),

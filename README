@@ -1,0 +1,9 @@
+desenvolvimento do site da Associacao Brasileira de Pedagogia Espirita (www.pedagogiaespirita.org.br)
+
+primeiro semestre de 2008
+
+
+instalacao:
+baixar o Tikiwiki 1.10 e instalar no diretorio raiz do site
+baixar o codigo do https://opensvn.csie.org/abpe e rodar o polvo
+instalar o webcalendar 1.0.5 (esta no repositorio SVN) e instalar dentro do diretorio agenda/ dentro do diretorio do site

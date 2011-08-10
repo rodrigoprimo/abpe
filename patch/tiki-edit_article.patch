@@ -1,0 +1,11 @@
+--- tiki-edit_article.php	2008-07-09 15:15:33.000000000 -0300
++++ tiki-edit_article.php	2008-07-10 14:43:45.000000000 -0300
+@@ -71,7 +71,7 @@
+ $smarty->assign('heading', '');
+ $smarty->assign('body', '');
+ $smarty->assign('author', '');
+-$smarty->assign('type', 'Article');
++$smarty->assign('type', '');
+ $smarty->assign('rating', 7);
+ $smarty->assign('edit_data', 'n');
+ $smarty->assign('emails', '');
