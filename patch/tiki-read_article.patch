@@ -1,12 +1,13 @@
---- tiki-read_article.php	2008-09-30 16:07:08.000000000 -0300
-+++ tiki-read_article.php	2008-09-30 16:32:51.000000000 -0300
-@@ -24,6 +24,9 @@
- 
- $article_data = $tikilib->get_article($_REQUEST["articleId"]);
- 
+--- tiki-read_article.php	2011-02-15 15:20:15.000000000 -0200
++++ tiki-read_article.php	2011-08-11 11:25:33.537759860 -0300
+@@ -16,6 +16,10 @@
+ }
+ $article_data = $artlib->get_article($_REQUEST["articleId"]);
+ $tikilib->get_perm_object($_REQUEST['articleId'], 'article');
++
 +/* gambi para funcionar o highlight do menu lateral */
 +$smarty->assign('nomepagina', $article_data['type']);
 +
  if ($article_data === false) {
+ 	if (!$user) $_SESSION['loginfrom'] = $_SERVER['REQUEST_URI'];
  	$smarty->assign('errortype', 401);
- 	$smarty->assign('msg', tra('Permission denied'));
