@@ -187,12 +187,8 @@ function print_upcoming_event ( $e, $timestamp ) {
     if ( $display_link && ! empty ( $server_url ) ) {
       print "<a title=\"" . 
         $e['cal_name'] . "\" href=\"" . 
-        $server_url . "view_entry.php?id=" . 
-        $e['cal_id'] . "&amp;date=" . 
-        $e['cal_date'] . "\"";
-      if ( ! empty ( $link_target ) ) {
-        print " target=\"$link_target\"";
-      }
+        "agenda.php?id=" . 
+        $e['cal_id'] . "\"";
       print ">";
     }
     print $e['cal_name'];
