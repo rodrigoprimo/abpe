@@ -10,6 +10,7 @@ function wikiplugin_artigo_help() {
 
 function wikiplugin_artigo($data,$params) {
     global $smarty, $tikilib, $prefs, $tiki_p_read_article;
+    global $artlib; require_once('lib/articles/artlib.php');
     
     extract($params,EXTR_SKIP);
     if (($prefs['feature_articles'] !=  'y') || ($tiki_p_read_article != 'y')) {
@@ -19,7 +20,7 @@ function wikiplugin_artigo($data,$params) {
 
     $type='artigo';
 
-    $list_articles = $tikilib->list_articles(0, 1, 'publishDate_desc', '', $tikilib->now, 'admin', $type, '', 'y', '', '', '', '', '');
+    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', $tikilib->now, 'admin', $type, '', 'y', '', '', '', '', '');
     $artigo = $list_articles['data'][0];
     $artigo['parsed_heading'] = $tikilib->parse_data($artigo['heading']);
     

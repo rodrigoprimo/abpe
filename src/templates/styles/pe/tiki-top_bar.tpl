@@ -8,7 +8,7 @@
 {assign var=filepath value="styles/pe/logos/$nomepagina.png"}
 
 {if $prefs.language eq 'pt-br'}
-	{if $filepath|file_exists}
+	{if file_exists($filepath)}
 		<img class='logo' src='styles/pe/logos/{$nomepagina}.png' />
 	{else}
 		<img class='logo' src='styles/pe/logos/logo.jpg' />

@@ -10,7 +10,8 @@ function wikiplugin_posts_help() {
 
 function wikiplugin_posts($data,$params) {
 	global $smarty, $prefs, $tiki_p_read_blog, $tikilib;
-	include_once ('lib/blogs/bloglib.php');
+	global $bloglib; require_once('lib/blogs/bloglib.php');
+	
 	extract($params,EXTR_SKIP);
 	if (($prefs['feature_blogs'] !=  'y') || ($tiki_p_read_blog != 'y')) {
 		// the feature is disabled or the user can't read blogs
@@ -22,7 +23,7 @@ function wikiplugin_posts($data,$params) {
 	if (!isset($max))
 	    $max='5';
 
-	$blog = $tikilib->get_blog($blogId);
+	$blog = $bloglib->get_blog($blogId);
         if (is_object($bloglib)) {
             $posts = $bloglib->list_blog_posts($blogId, '', $max);
         }

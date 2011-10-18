@@ -10,6 +10,7 @@ function wikiplugin_noticia_help() {
 
 function wikiplugin_noticia($data,$params) {
     global $smarty, $tikilib, $prefs, $tiki_p_read_article;
+    global $artlib; require_once('lib/articles/artlib.php');
     
     extract($params,EXTR_SKIP);
     if (($prefs['feature_articles'] !=  'y') || ($tiki_p_read_article != 'y')) {
@@ -20,7 +21,7 @@ function wikiplugin_noticia($data,$params) {
     $tipo = 'noticia';
 
     //TODO: verificar se nao tem uma funcao que pega soh o titulo, a data e o id dos artigos para nao precisar pegar tudo
-    $list_articles = $tikilib->list_articles(0, 5, 'publishDate_desc', '', $tikilib->now, 'admin', $tipo, '', 'y', '', '', '', '', '');
+    $list_articles = $artlib->list_articles(0, 5, 'publishDate_desc', '', $tikilib->now, 'admin', $tipo, '', 'y', '', '', '', '', '');
     $items = $list_articles['data'];
     $i = 0;
     foreach ($items as $item) {
