@@ -9,9 +9,9 @@ insert into tiki_preferences values ('feature_tell_a_friend', 'n') on duplicate 
 insert into tiki_preferences values ('wikiplugin_banner' ,'y') on duplicate key update value = 'y';
 
 insert into tiki_preferences values ('feature_sitemycode' ,'y') on duplicate key update value = 'y';
-insert into tiki_preferences values ('sitemycode','{include file=\'pe-top_bar.tpl\'}\r\n');
+insert into tiki_preferences values ('sitemycode','{include file=\'pe-top_bar.tpl\'}\r\n') on duplicate key update value = '{include file=\'pe-top_bar.tpl\'}\r\n';
 
 insert into tiki_preferences values ('feature_sitesearch', 'n') on duplicate key update value = 'n';
-insert into tiki_preferences values ('feature_bot_bar', 'n') on duplicate key update value = 'n';
+insert into tiki_preferences values ('feature_bot_bar', 'y') on duplicate key update value = 'y';
 insert into tiki_preferences values ('feature_top_bar', 'n') on duplicate key update value = 'n';
 

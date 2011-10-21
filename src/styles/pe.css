@@ -72,6 +72,7 @@ textarea {
 
 div#main {
 	margin-top: 0px !important;
+	margin-bottom: 0px !important;
 	background-color: white;
 	margin: auto;
 	width: 780px;
@@ -251,6 +252,7 @@ div.article #conteudo {
 .box_noticias, .box_revista, .box_blog, .box_artigos {
 	width : 300px;
 	height : 130px;
+	line-height: 14px;
 }
 
 /* boxes da esquerda */
@@ -322,12 +324,29 @@ div.article #conteudo {
 
 /*********************** MENU PHPLayer ************************************/
 
+#menu {
+	position: absolute;
+	left: 56px;
+	top: 134px;
+	vertical-align: middle;
+	width: 480px;
+}
 
 #menu a {
 	color: #666;
 	text-decoration: none;
 	padding-right: 10px;
 	font-size : 12px;
+	line-height: 16px;
+}
+
+div#menu .horbar table {
+    width: 100%;
+}
+
+.horbaritem {
+    border-right: 0px;
+    padding: 0;
 }
 
 /* phplayers style */
@@ -587,44 +606,30 @@ div#middle {
 }
 
 div#footer {
-	padding-bottom : 20px;
+	padding-bottom : 0px;
 	background-image : url(../styles/pe/barra_inf.png);
 	background-position : 5px 10px;
 	background-repeat : no-repeat;
 }
 
-#menu {
-	position: absolute;
-	left: 56px;
-	top: 134px;
-	vertical-align: middle;
-}
-
-#menu a {
-    color: #666666;
-    font-size: 12px;
-    padding-right: 10px;
-    text-decoration: none;
-}
-
-.horbaritem {
-    border-right: 0px;
-    padding: 0;
-}
- 
 #col2 {
-	width : 144px;
+	width : 150px !important;
 	padding : 5px 0px 0px 0px;
 	border-right : 0px;
+}
+
+#col2 .box {
+	width: 142px;
+	margin: 0 0 0 8px;
+}
+
+#col2 .content {
+	padding: 0;
 }
 
 #wrapper {
 	background-color: white;
 	padding : 0;
-}
-
-DIV#tiki-center {
-	padding: 0px 10px 10px 10px;
 }
 
 div.box {
@@ -636,10 +641,204 @@ div.box {
  	font-size : 10px;
 }
 
+#c1c2 #wrapper .marginleft {
+    margin-left: 160px;
+}
+
+#c1c2 #wrapper #col1 #tiki-center {
+    background: none;
+    border: 0px;
+    margin: 0;
+	padding: 3px 0px 0px 5px;
+}
+
 .linkmenu:hover {
 	text-decoration : underline;
 }
 
 div.cbox-data {
 	padding : 0 5px;
+}
+
+div.box-data {
+	padding: 0px;
+}
+
+.fgallisting table td {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.forumform td {
+	background-color: #E4E5E6;
+	border: 1px solid #666666;
+}
+
+/* Fazendo a edição para página Tell_A_Friend */
+td.formcolor {
+	border-right: 0;
+}
+.campos {
+	color: rgb(38,34,97);
+	font-size: 13pt;
+}	
+td.entradas {
+	background-color: white;
+	border-left: 0;
+	border-right: 1px solid #666666;
+}
+
+td.listartheading, td.forumheading, td.viewthread, th.heading {
+	background-color : #cfd0d2;
+	border : 1px solid white;
+ 	padding : 0 2px;
+	text-align: center;
+}
+
+a.fgalname { text-decoration: none; font-weight: normal; color: #000 !important; }
+
+.thumbnamesub a.fgalname { color: #666 !important; }
+
+a.forumname {
+	text-align: justify;
+	margin-left: 22pt;
+	font-size: 11pt;
+	font-weight: normal;
+	color: black;
+	text-decoration: none;
+}
+
+.tableheading, .gallistheading, .listgalheading, .bloglistheading,
+ .llisfgalheading, .llistfileslink, .llistart, .lforumheading {
+	font-size: 13pt;
+	color:#262261;
+	text-decoration: none;
+}
+
+td.topicrepliesodd,td.topicreadsodd,td.topicscoreodd,td.topiclastpostodd,td.topicauthorodd, td.jukeboxlistnameodd,
+ td.jukeboxdescriptionodd, td.jukeboxcreatedodd, td.jukeboxlastmodifodd, td.jukeboxlistuserodd, td.jukeboxlisttracksodd,
+ td.jukeboxlistvisitsodd {
+	border : 1px solid #666;
+ 	border-collapse : collapse;
+	background-color : white;
+ 	vertical-align: middle;
+}
+
+td.topicreplieseven,td.topicreadseven,td.topicscoreeven,td.topiclastposteven,td.topicauthoreven, td.jukeboxlistnameeven,
+ td.jukeboxdescriptioneven, td.jukeboxcreatedeven, td.jukeboxlastmodifeven, td.jukeboxlistusereven, td.jukeboxlisttrackseven,
+ td.jukeboxlistvisitseven {
+	border : 1px solid #666;
+	background-color : white;
+ 	color : black;
+ 	border-collapse : collapse;
+ 	vertical-align: middle;
+}
+
+ /* When the page title is a link this is the style */
+.pagetitle, .forumspagetitle {
+ 	margin : 0 10px;
+ 	margin-bottom : 3px;
+	font-size : 22pt;
+	color : #4d4d4d;
+	font-weight: normal;
+	text-decoration: none;
+}
+ 
+.gallink, .bloglink, .fgallink, .trailer,
+ .opencomlink, .commentslink, .admlink,.forumbutlink {
+	color : #9e0000;
+ 	font-weight : normal;
+ 	padding : 0;
+ }
+
+.link {
+	color : #587bbd;
+	font-size : 10pt;
+	font-weight : normal;
+}
+.permalink {
+	color : red;
+	font-size : 9pt;
+	font-weight : normal;
+}
+ 
+a.prevnext {
+	color: black;
+	font-weight: normal;
+}
+
+DIV#page-bar {
+	border-top: 0px;
+}
+
+DIV#page-bar table, DIV#page-bar td, DIV#page-bar tr {
+ 	margin: 0;
+ 	padding: 0;
+}
+
+ div.wikitext {
+	font-size : 10px;
+	padding : 0px 0px 0px 0px;
+ 	clear : both;
+ 	width : auto;
+	text-align:justify;
+}
+
+div.wikitext a {
+    color: #597ABD;
+    font-weight: bold;
+    outline: medium none;
+	text-decoration: underline;
+}
+
+
+/****************************************************** CMS ***************************************************************/
+
+span.titlea {
+	font-size : 15pt;
+	font-weight : normal;
+	color: rgb(38,34,97);
+}
+
+span.titlea a {
+	font-size : 15pt;
+	font-weight : normal;
+	color: rgb(38,34,97);
+	text-decoration : none;
+}
+
+span.titleb,
+ span.titleb:after {
+ 	font-size : 10px;
+ 	color : #666666;
+	margin: 0px;
+}
+
+div.articleheading {
+	margin : 5px 0px 5px 0px;
+}
+
+div.articleheadingtext {
+	text-align : justify;
+	font-size : 11px;
+}
+
+ .articleimage {
+	margin-right : 5px;
+	border: 3px solid white;
+	outline-color : gray;
+	outline-style : solid;
+	outline-width : 1px;
+}
+
+#power {
+       font-family:arial,sans-serif;
+       text-align: center;
+       font-size: 7pt;
+       padding-top: 15px;
+}
+
+.footerbgtrap {
+	background: none;
+	border: 0px;
 }
