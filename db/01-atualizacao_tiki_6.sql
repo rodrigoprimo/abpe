@@ -10,8 +10,13 @@ insert into tiki_preferences values ('wikiplugin_banner' ,'y') on duplicate key 
 
 insert into tiki_preferences values ('feature_sitemycode' ,'y') on duplicate key update value = 'y';
 insert into tiki_preferences values ('sitemycode','{include file=\'pe-top_bar.tpl\'}\r\n') on duplicate key update value = '{include file=\'pe-top_bar.tpl\'}\r\n';
+insert into tiki_preferences values ('sitemycode_publish' ,'y') on duplicate key update value = 'y';
 
 insert into tiki_preferences values ('feature_sitesearch', 'n') on duplicate key update value = 'n';
 insert into tiki_preferences values ('feature_bot_bar', 'y') on duplicate key update value = 'y';
 insert into tiki_preferences values ('feature_top_bar', 'n') on duplicate key update value = 'n';
+insert into tiki_preferences values ('site_title_location', 'before') on duplicate key update value = 'before';
+
+insert into tiki_preferences values ('feature_search', 'y') on duplicate key update value = 'y';
+insert into tiki_preferences values ('feature_search_fulltext', 'y') on duplicate key update value = 'y';
 
