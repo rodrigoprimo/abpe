@@ -20,7 +20,7 @@ function wikiplugin_artigo($data,$params) {
 
     $type='artigo';
 
-    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', $tikilib->now, 'admin', $type, '', 'y', '', '', '', '', '');
+    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y');
     $artigo = $list_articles['data'][0];
     $artigo['parsed_heading'] = $tikilib->parse_data($artigo['heading']);
     

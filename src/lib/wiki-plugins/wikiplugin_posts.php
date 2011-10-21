@@ -25,7 +25,7 @@ function wikiplugin_posts($data,$params) {
 
 	$blog = $bloglib->get_blog($blogId);
         if (is_object($bloglib)) {
-            $posts = $bloglib->list_blog_posts($blogId, '', $max);
+            $posts = $bloglib->list_blog_posts($blogId, false, 0, $max);
         }
 	$smarty->assign('blog', $blog);
 	$smarty->assign('posts', $posts['data']);

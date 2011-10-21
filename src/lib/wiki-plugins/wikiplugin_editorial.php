@@ -20,7 +20,7 @@ function wikiplugin_editorial($data,$params) {
 
     $type='editorial';
 
-    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', $tikilib->now, 'admin', $type, '', 'y', '', '', '', '', '');
+    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y');
     $editorial = $list_articles['data'][0];
     $editorial['parsed_heading'] = $tikilib->parse_data($editorial['heading']);
     
