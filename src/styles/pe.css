@@ -431,6 +431,7 @@ a.phplm:hover, .phplmnormal a:hover {
 	font-family : Arial, Helvetica, sans-serif;
 	font-weight : normal;
 	font-size : 12px;
+	line-height: 14px;
 }
 
 #Menu_lateral div {
@@ -586,6 +587,10 @@ div.box-search_new input {
 	padding : 0;
 }
 
+div.box-search_new #search_text_input {
+	width: 75%;
+}
+
 div.box-search_new input#fuser {
 	border : 1px solid #666;
 	width : 120px;
@@ -649,7 +654,7 @@ div.box {
     background: none;
     border: 0px;
     margin: 0;
-	padding: 3px 0px 0px 5px;
+	padding: 3px 10px 0px 10px;
 }
 
 .linkmenu:hover {
