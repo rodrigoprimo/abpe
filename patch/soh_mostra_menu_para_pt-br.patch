@@ -1,5 +1,5 @@
 --- templates/tiki.tpl	2010-12-09 09:33:26.926616993 -0200
-+++ templates/tiki.tpl	2011-10-21 18:35:25.577683013 -0200
++++ templates/tiki.tpl	2011-10-31 16:32:50.805891893 -0200
 @@ -48,7 +48,7 @@
  			{if $prefs.feature_layoutshadows eq 'y'}<div id="middle-shadow">{eval var=$prefs.middle_shadow_start}{/if}<div class="clearfix" id="middle">
  				<div class="clearfix {if $prefs.feature_fullscreen != 'y' or $smarty.session.fullscreen != 'y'}nofullscreen{else}fullscreen{/if}" id="c1c2">
@@ -14,7 +14,7 @@
  {if $prefs.feature_fullscreen != 'y' or $smarty.session.fullscreen != 'y'}
  					<hr class="hidden" />{* for semantic separation of center and side columns *}
 -	{if  $prefs.feature_left_column eq 'fixed' or ($prefs.feature_left_column ne 'n' && $left_modules|@count > 0 && $show_columns.left_modules ne 'n')}
-+	{if ($prefs.feature_left_column eq 'fixed' or ($prefs.feature_left_column ne 'n' && $left_modules|@count > 0 && $show_columns.left_modules ne 'n')) && ($prefs.language eq 'pt-br' || $tiki_p_admin eq 'y')}
++	{if  $prefs.feature_left_column eq 'fixed' or ($prefs.feature_left_column ne 'n' && $left_modules|@count > 0 && $show_columns.left_modules ne 'n') and ($prefs.language eq 'pt-br' || $tiki_p_admin eq 'y')}
  					<div id="col2"{if $prefs.feature_left_column eq 'user'} style="display:{if isset($cookie.show_col2) and $cookie.show_col2 ne 'y'} none{elseif isset($ie6)} block{else} table-cell{/if};"{/if}{if $prefs.feature_bidi eq 'y'} dir="rtl"{/if}>
  						<h2 class="hidden">Sidebar</h2>
  						<div class="content">
