@@ -329,7 +329,7 @@ div.article #conteudo {
 	left: 56px;
 	top: 134px;
 	vertical-align: middle;
-	width: 480px;
+	width: 570px;
 }
 
 #menu a {
@@ -468,9 +468,9 @@ a.phplm:hover, .phplmnormal a:hover {
 	text-decoration: none;
 }
 
-.icone_ativo a {
-	color : white;
-	background-position:4px 2px;
+.icone_ativo a, .icone_ativo a:hover {
+	color: white;
+	background-position: 4px 2px;
 	background-repeat:no-repeat;
 }
 
@@ -478,27 +478,27 @@ a.phplm:hover, .phplmnormal a:hover {
 	text-decoration : none;
 }
 
-.icone_ativo#icone0  {
+.icone_ativo#icone0 a {
 	background-color: #00685b;
 }
 
-.icone_ativo#icone1  {
+.icone_ativo#icone1 a {
 	background-color: #f36018;
 }
 
-.icone_ativo#icone2  {
+.icone_ativo#icone2 a {
 	background-color: #a7de09;
 }
 
-.icone_ativo#icone3  {
+.icone_ativo#icone3 a {
 	background-color: #00869c;
 }
 
-.icone_ativo#icone4  {
+.icone_ativo#icone4 a {
 	background-color: #ec1c24;
 }
 
-.icone_ativo#icone5  {
+.icone_ativo#icone5 a {
 	background-color: #90278e;
 }
 
@@ -506,22 +506,22 @@ a.phplm:hover, .phplmnormal a:hover {
 	background-color: #fca263;
 }
 
-.icone_ativo#icone7  {
+.icone_ativo#icone7 a {
 	background-color: #55b7de;
 }
 
-.icone_ativo#icone8  {
+.icone_ativo#icone8 a {
 	background-color: #009345;
 }
 
-.icone_ativo#icone9  {
+.icone_ativo#icone9 a {
 	background-color: #448b9f;
 }
 
-.icone_ativo#icone10  {
+.icone_ativo#icone10 a {
 	background-color: #4c4c4c;
 }
-.icone_ativo#icone11  {
+.icone_ativo#icone11 a {
 	background-color: #262261;
 }
 
