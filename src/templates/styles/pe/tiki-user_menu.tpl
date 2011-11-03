@@ -1,4 +1,4 @@
-{* $Id: tiki-user_menu.tpl 13535 2008-07-10 21:14:58Z sylvieg $ *}
+{* $Id: tiki-user_menu.tpl 33328 2011-03-11 16:50:27Z sylvieg $ *}
 {assign var=opensec value='0'}
 {assign var=sep value=''}
 
@@ -12,38 +12,54 @@
 
 {if $opensec > 0}
 {assign var=sectionType value=$chdata.type}
-{php}
-global $smarty;
-$opensec = $smarty->get_template_vars('opensec');
-$sectionType= $smarty->get_template_vars('sectionType');
-if ($sectionType == 's' or $sectionType == 'r') {
-	$sectionType = 0;
-}
-while ($opensec > $sectionType) {
-	--$opensec;
-	echo '</div>';
-}
-$smarty->assign('opensec', $opensec);
-{/php}
+{if $sectionType eq 's' or $sectionType eq 'r'}{assign var=sectionType value=0}{/if}
+{if $opensec > $sectionType}
+{assign var=m value=$opensec-$sectionType}
+{section loop=$menu_channels name=close max=$m}
+	   </div>
+{/section}
+{assign var=opensec value=$sectionType}
+{/if}
 {/if}
 
-<div class="separator{$sep}">
+<div class="separator{$sep}{if isset($chdata.selected) and $chdata.selected} selected{/if}{if isset($chdata.selectedAscendant) and $chdata.selectedAscendant} selectedAscendant{/if}">
 {if $sep eq 'line'}{assign var=sep value=''}{/if}
 {if $menu_info.type eq 'e' or $menu_info.type eq 'd'}
-	{if $prefs.feature_menusfolderstyle eq 'y'}
-	{assign var="name" value=icnmenu$cname}
+	{if $prefs.menus_items_icons eq 'y' and $menu_info.use_items_icons eq 'y'}
+		<span class="separatoricon-toggle" style="display:inline">
+			<a class='separator' href="javascript:toggle('menu{$cname}');">
+				{icon _id=$chdata.icon alt="{tr}Toggle{/tr}" _defaultdir=$prefs.menus_items_icons_path}
+			</a>
+		</span>
+		{if $chdata.url and $link_on_section eq 'y'}
+			<span class="separatoricon-url" style="display:none">
+				<a href="{if $prefs.feature_sefurl eq 'y' and !empty($chdata.sefurl)}{$chdata.sefurl|escape}{else}{if $prefs.menus_item_names_raw eq 'n'}{$chdata.url|escape}{else}{$chdata.url}{/if}{/if}">
+					{icon _id=$chdata.icon alt="{tr}Toggle{/tr}" _defaultdir=$prefs.menus_items_icons_path}
+				</a>
+			</span>
+		{/if}
+	{elseif $prefs.feature_menusfolderstyle eq 'y'}
+	{assign var="icon_name" value=icnmenu$cname}
 	<a class='separator' href="javascript:icntoggle('menu{$cname}');" title="{tr}Toggle options{/tr}">
 		{if $menu_info.type ne 'd'}
 			{if empty($menu_info.icon)}
-				{icon _id="ofolder" alt='Toggle' name="$name"}
+				{icon _id="ofolder" alt='Toggle' name="$icon_name" id="$icon_name"}
 			{else}
-				<img src="{$menu_info.oicon}" border="0" alt='{tr}Toggle{/tr}' name="{$name}" />
+				<img src="{$menu_info.oicon|escape}" alt="{tr}Toggle{/tr}" name="{$icon_name}" id="$icon_name" />
 			{/if}
 		{else}
 			{if empty($menu_info.icon)}
-				{icon _id="folder" alt='Toggle' name="$name"}
+				{if isset($chdata.open) and $chdata.open}
+					{icon _id="ofolder" alt='Toggle' name="$icon_name" id="$icon_name"}
+				{else}
+					{icon _id="folder" alt='Toggle' name="$icon_name" id="$icon_name"}
+				{/if}
 			{else}
-				<img src="{$menu_info.icon}" border="0" alt='{tr}Toggle{/tr}' name="{$name}" />
+				{if isset($chdata.open) and $chdata.open}
+					<img src="{$menu_info.oicon|escape}" alt="{tr}Toggle{/tr}" name="{$icon_name}" id="$icon_name" />
+				{else}
+					<img src="{$menu_info.icon|escape}" alt="{tr}Toggle{/tr}" name="{$icon_name}" id="$icon_name" />
+				{/if}
 			{/if}
 		{/if}
 	</a>
@@ -52,26 +68,43 @@ $smarty->assign('opensec', $opensec);
 	{/if}
 {/if} 
 {if $chdata.url and $link_on_section eq 'y'}
-<a href="{if $prefs.feature_sefurl eq 'y' and $chdata.sefurl}{$chdata.sefurl}{else}{$chdata.url}{/if}" class="separator">
+<a href="{if $prefs.feature_sefurl eq 'y' and !empty($chdata.sefurl)}{$chdata.sefurl|escape}{else}{if $prefs.menus_item_names_raw eq 'n'}{$chdata.url|escape}{else}{$chdata.url}{/if}{/if}" class="separator">
 {else}
 <a href="javascript:icntoggle('menu{$cname}');" class="separator">
 {/if}
-{tr}{$chdata.name}{/tr}
+	<span class="menuText">
+		{if $translate eq 'n'}
+			{if $prefs.menus_item_names_raw eq 'n'}{$chdata.name|escape}{else}{$chdata.name}{/if}
+		{else}
+			{tr}{if $prefs.menus_item_names_raw eq 'n'}{$chdata.name|escape}{else}{$chdata.name}{/if}{/tr}
+		{/if}
+	</span>
 </a>
 {if ($menu_info.type eq 'e' or $menu_info.type eq 'd') and $prefs.feature_menusfolderstyle ne 'y'}<a class='separator' href="javascript:toggle('menu{$cname}');">[+]</a>{/if} 
 </div> {* separator *}
 
 {assign var=opensec value=$opensec+1}
 {if $menu_info.type eq 'e' or $menu_info.type eq 'd'}
-<div class="menuSection" {if $menu_info.type eq 'd' and $smarty.cookies.menu ne ''}style="display:none;"{else}style="display:block;"{/if} id='menu{$cname}'>
+<div class="menuSection" {if !isset($chdata.open) || !$chdata.open}style="display:none;"{else}style="display:block;"{/if} id='menu{$cname}'>
 {else}
 <div class="menuSection">
 {/if}
-
 {* ----------------------------- option *}
 {elseif $chdata.type eq 'o'}
-<div class="option{$sep}{if $menu_info.menuId eq '43'} icone{if $nomepagina eq $chdata.url}_ativo{/if}" id="icone{$i++}"{if $i==12}{assign var=i value='0'}{/if}{else}"{/if} >
-<a href="{if $prefs.feature_sefurl eq 'y' and $chdata.sefurl}{$chdata.sefurl}{else}{$chdata.url}{/if}" class="linkmenu">{tr}{$chdata.name}{/tr}</a></div>
+<div class="option{$sep}{if isset($chdata.selected) and $chdata.selected} selected{/if} {if $menu_info.menuId eq '43'} icone{if isset($nomepagina) and $nomepagina eq $chdata.url}_ativo{/if}" id="icone{$i++}"{if $i==12}{assign var=i value='0'}{/if}{else}"{/if}">
+	<a href="{if $prefs.feature_sefurl eq 'y' and !empty($chdata.sefurl)}{$chdata.sefurl|escape}{else}{if $prefs.menus_item_names_raw eq 'n'}{$chdata.url|escape}{else}{$chdata.url}{/if}{/if}" class="linkmenu">
+		{if $prefs.menus_items_icons eq 'y' and $menu_info.use_items_icons eq 'y' and ($opensec eq 0 or $chdata.icon neq '')}
+			{icon _id=$chdata.icon alt='' _defaultdir=$prefs.menus_items_icons_path}
+		{/if}
+		<span class="menuText">
+			{if $translate eq 'n'}
+				{if $prefs.menus_item_names_raw eq 'n'}{$chdata.name|escape}{else}{$chdata.name}{/if}
+			{else}
+				{tr}{if $prefs.menus_item_names_raw eq 'n'}{$chdata.name|escape}{else}{$chdata.name}{/if}{/tr}
+			{/if}
+		</span>
+	</a>
+</div>
 {if $sep eq 'line'}{assign var=sep value=''}{/if}
 
 {* ----------------------------- separator *}
@@ -82,28 +115,9 @@ $smarty->assign('opensec', $opensec);
 {/foreach}
 
 {if $opensec > 0}
-{php}
-global $smarty;
-$opensec = $smarty->get_template_vars('opensec');
-while ($opensec) {
-	--$opensec;
-	echo '</div>';
-}
-{/php}
-{/if}
-
-{* --------------------Dynamic menus *}
-{if $menu_info.type eq 'e' or $menu_info.type eq 'd'}
-<script type='text/javascript'>
-{foreach key=pos item=chdata from=$menu_channels}
-{if $chdata.type ne 'o' and $chdata.type ne '-'}
-  {if $prefs.feature_menusfolderstyle eq 'y'}
-    setfolderstate('menu{$menu_info.menuId|cat:'__'|cat:$chdata.position}', '{$menu_info.type}');
-  {else}
-    setsectionstate('menu{$menu_info.menuId|cat:'__'|cat:$chdata.position}', '{$menu_info.type}');
-  {/if}
-{/if}
-{/foreach}
-</script>
+{section loop=$menu_channels name=close max=$opensec}
+	</div>
+{/section}
+{assign var=opensec value=0}
 {/if}
 
