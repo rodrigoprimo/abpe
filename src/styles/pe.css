@@ -291,32 +291,6 @@ div.article #conteudo {
 	margin-bottom: 15px;
 }
 
-.box_agenda {
-	text-align : justify;
-	clear: both;
-	background-image : url(../styles/pe/agenda.png);
-	background-position : 100% 100%;
-	background-repeat : no-repeat;
-	background-color : #f2fafc;
-	padding: 10px;
-	color: #555;
-}
-
-.box_agenda h1 {
-	color:#555;
-	font-size:14px;
-}
-
-.box_agenda a {
-	color: #555;
-	font-weight: normal;
-	text-decoration: none;
-}
-
-.box_agenda a:hover {
-	text-decoration: underline;
-}
-
 /*********************** MENU PHPLayer ************************************/
 
 #menu {
