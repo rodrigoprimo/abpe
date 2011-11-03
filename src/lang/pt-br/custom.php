@@ -119,7 +119,6 @@ $lang_custom = array(
 "Last Modified" => "Modificação",
 "Last Post" => "Últ. Mensg.",
 "Type" => "Tipo",
-"Forums" => "Fórum",
 "Powered by" => "| Provido por",
 );
 $lang = array_merge($lang, $lang_custom);

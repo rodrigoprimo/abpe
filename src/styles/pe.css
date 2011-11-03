@@ -643,11 +643,6 @@ div.box-data {
 	padding-right: 2px;
 }
 
-.forumform td {
-	background-color: #E4E5E6;
-	border: 1px solid #666666;
-}
-
 /* Fazendo a edição para página Tell_A_Friend */
 td.formcolor {
 	border-right: 0;
@@ -662,7 +657,7 @@ td.entradas {
 	border-right: 1px solid #666666;
 }
 
-td.listartheading, td.forumheading, td.viewthread, th.heading {
+td.listartheading, td.viewthread, th.heading {
 	background-color : #cfd0d2;
 	border : 1px solid white;
  	padding : 0 2px;
@@ -672,15 +667,6 @@ td.listartheading, td.forumheading, td.viewthread, th.heading {
 a.fgalname { text-decoration: none; font-weight: normal; color: #000 !important; }
 
 .thumbnamesub a.fgalname { color: #666 !important; }
-
-a.forumname {
-	text-align: justify;
-	margin-left: 22pt;
-	font-size: 11pt;
-	font-weight: normal;
-	color: black;
-	text-decoration: none;
-}
 
 .tableheading, .gallistheading, .listgalheading, .bloglistheading,
  .llisfgalheading, .llistfileslink, .llistart, .lforumheading {
@@ -709,7 +695,7 @@ td.topicreplieseven,td.topicreadseven,td.topicscoreeven,td.topiclastposteven,td.
 }
 
  /* When the page title is a link this is the style */
-.pagetitle, .forumspagetitle {
+.pagetitle {
  	margin : 0 10px;
  	margin-bottom : 3px;
 	font-size : 22pt;
