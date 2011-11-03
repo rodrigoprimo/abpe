@@ -448,97 +448,81 @@ a.phplm:hover, .phplmnormal a:hover {
 }
 
 .icone_ativo#icone0 a {
-	background-color: #00685b;
-}
-
-.icone_ativo#icone1 a {
 	background-color: #f36018;
 }
 
-.icone_ativo#icone2 a {
+.icone_ativo#icone1 a {
 	background-color: #a7de09;
 }
 
-.icone_ativo#icone3 a {
-	background-color: #00869c;
-}
-
-.icone_ativo#icone4 a {
-	background-color: #ec1c24;
-}
-
-.icone_ativo#icone5 a {
+.icone_ativo#icone2 a {
 	background-color: #90278e;
 }
 
-.icone_ativo#icone6  {
+.icone_ativo#icone3  {
 	background-color: #fca263;
 }
 
-.icone_ativo#icone7 a {
+.icone_ativo#icone4 a {
 	background-color: #55b7de;
 }
 
-.icone_ativo#icone8 a {
+.icone_ativo#icone5 a {
 	background-color: #009345;
 }
 
-.icone_ativo#icone9 a {
+.icone_ativo#icone6 a {
 	background-color: #448b9f;
 }
 
-.icone_ativo#icone10 a {
+.icone_ativo#icone7 a {
 	background-color: #4c4c4c;
 }
-.icone_ativo#icone11 a {
+
+.icone_ativo#icone8 a {
 	background-color: #262261;
 }
 
-#icone0 a {
-	background-image:url(pe/menu/0.gif);
+.icone_ativo#icone9 a {
+	background-color: #00685B;
 }
 
-#icone1 a {
+#icone0 a {
 	background-image:url(pe/menu/1.gif);
 }
 
-#icone2 a {
+#icone1 a {
 	background-image:url(pe/menu/2.gif);
 }
 
-#icone3 a {
-	background-image:url(pe/menu/3.gif);
-}
-
-#icone4 a {
-	background-image:url(pe/menu/4.gif);
-}
-
-#icone5 a {
+#icone2 a {
 	background-image:url(pe/menu/5.gif);
 }
 
-#icone6 a {
+#icone3 a {
 	background-image:url(pe/menu/6.gif);
 }
 
-#icone7 a {
+#icone4 a {
 	background-image:url(pe/menu/7.gif);
 }
 
-#icone8 a {
+#icone5 a {
 	background-image:url(pe/menu/8.gif);
 }
 
-#icone9 a {
+#icone6 a {
 	background-image:url(pe/menu/9.gif);
 }
 
-#icone10 a {
+#icone7 a {
 	background-image:url(pe/menu/10.gif);
 }
-#icone11 a {
+#icone8 a {
 	background-image:url(pe/menu/11.gif);
+}
+#icone9 a {
+	background-image:url(pe/menu/0.gif);
 }
 
 div.box-search_new h3, div.box-Banners h3 {
