@@ -1,0 +1,25 @@
+--- templates/tiki-preview_article.tpl	2010-10-25 10:03:30.988922001 -0200
++++ templates/tiki-preview_article.tpl	2011-11-07 11:39:16.686576213 -0200
+@@ -34,11 +34,7 @@
+ 									<img alt="{tr}Article image{/tr}" src="article_image.php?image_type=article&amp;id={$articleId}" />
+ 								{/if}
+ 							{/if}
+-						{elseif $topicId ne ''}
+-							<img alt="{tr}Topic image{/tr}" src="article_image.php?image_type=topic&amp;id={$topicId}" />
+ 						{/if}
+-					{elseif $topicId ne ''}
+-						<img alt="{tr}Topic image{/tr}" src="article_image.php?image_type=topic&amp;id={$topicId}" />
+ 					{/if}
+ 					<div class="articleheadingtext">{$parsed_heading}</div>
+ 				</td>
+@@ -46,10 +42,6 @@
+ 		</table>
+ 	</div>
+ 
+-	<div style="padding:5px;" class="articletrailer">
+-		({$size} {tr}bytes{/tr})
+-	</div>
+-
+ 	<div class="articlebody">
+ 		{$parsed_body}
+ 	</div>
