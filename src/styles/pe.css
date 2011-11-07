@@ -738,13 +738,18 @@ div.wikitext a {
 
 /****************************************************** CMS ***************************************************************/
 
-span.titlea {
+
+span.titlea, div.articletitle h2 {
 	font-size : 15pt;
 	font-weight : normal;
 	color: rgb(38,34,97);
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
 }
 
-span.titlea a {
+span.titlea a, div.articletitle h2 a {
 	font-size : 15pt;
 	font-weight : normal;
 	color: rgb(38,34,97);
@@ -767,7 +772,17 @@ div.articleheadingtext {
 	font-size : 11px;
 }
 
- .articleimage {
+.articletrailer {
+	margin: 0;
+	border: 0;
+	vertical-align: middle;
+}
+
+.highlight {
+	background: none;
+}
+
+.articleimage {
 	margin-right : 5px;
 	border: 3px solid white;
 	outline-color : gray;
