@@ -1,14 +1,12 @@
-{if $type == 'Notícia'}
+{if $type == 'noticia'}
 	{assign var=title value='Notícias'}
-{elseif $type == 'Editorial'}
+{elseif $type == 'editorial'}
 	{assign var=title value='Editoriais'}
-{elseif $type == 'Revista'}
+{elseif $type == 'revista'}
 	{assign var=title value='Edições da revista'}
-{elseif $type == 'Artigo'}
+{elseif $type == 'artigo'}
 	{assign var=title value='Artigos'}
 {/if}
-
-<h1>{$title}</h1>
 
 {section name=ix loop=$listpages}
 	{if $listpages[ix].disp_article eq 'y'}
