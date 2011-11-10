@@ -1,0 +1,11 @@
+--- lib/wiki-plugins/wikiplugin_img.php	2011-04-26 10:31:38.902916001 -0300
++++ lib/wiki-plugins/wikiplugin_img.php	2011-11-10 17:07:22.519646818 -0200
+@@ -900,7 +900,7 @@
+ 		
+ 	////////////////////////////////////////// Create the HTML img tag //////////////////////////////////////////////
+ 	//Start tag with src and dimensions
+-	$src = filter_out_sefurl(htmlentities($src), $smarty);
++	//$src = filter_out_sefurl(htmlentities($src), $smarty);
+ 	$replimg = "\r\t" . '<img src="' . $src . '"';
+ 	if (!empty($imgdata_dim)) $replimg .= $imgdata_dim;
+ 	
