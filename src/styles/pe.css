@@ -28,7 +28,6 @@ h2 {
 h3 {
 	font-size : 11pt;
 	color : black;
-	text-indent : 22pt;
 	font-weight: normal;
 }
 /* TikiHeading 4 (!!!!) */
@@ -289,6 +288,16 @@ div.article #conteudo {
 
 .box_blog, .box_artigos {
 	margin-bottom: 15px;
+}
+
+h3.box-title, {
+    background-color: #F3F6F9;
+    border-bottom: 1px solid #ACCCDD;
+    font-size: 10px;
+	font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
 }
 
 /*********************** MENU PHPLayer ************************************/
