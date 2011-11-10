@@ -30,3 +30,7 @@ insert into tiki_preferences values ('feature_blogs', 'n') on duplicate key upda
 
 delete from `tiki_user_modules` where name = 'Menu_lateral';
 insert into `tiki_user_modules` (`name`,`title`,`data`, `parse`) VALUES ('Menu_lateral','Menu','{menu id=43}\r\n{if $user}\r\n  <div id=\"icone0\" class=\"option icone\">\r\n    <a class=\"linkmenu\" href=\"tiki-logout.php\">Sair</a>\r\n  </div>\r\n{else}\r\n  <div id=\"icone0\" class=\"option icone\">\r\n    <a class=\"linkmenu\" href=\"tiki-login.php\">Entrar</a>\r\n  </div>\r\n{/if}\r\n\r\n<center><a href=\"tiki-index.php?page=abpezinha\"><img src=\"styles/pe/ABPE_abpezinha.jpg\" alt=\"ABPEzinha\" title=\"ABPEzinha\" style=\"border:0px solid;\"></a><center>',NULL);
+
+insert into tiki_preferences values ('wiki_edit_plugin' ,'n') on duplicate key update value = 'n';
+insert into tiki_preferences values ('wiki_edit_icons_toggle' ,'n') on duplicate key update value = 'n';
+insert into tiki_preferences values ('wiki_edit_section' ,'n') on duplicate key update value = 'n';
