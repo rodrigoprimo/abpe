@@ -34,3 +34,5 @@ insert into `tiki_user_modules` (`name`,`title`,`data`, `parse`) VALUES ('Menu_l
 insert into tiki_preferences values ('wiki_edit_plugin' ,'n') on duplicate key update value = 'n';
 insert into tiki_preferences values ('wiki_edit_icons_toggle' ,'n') on duplicate key update value = 'n';
 insert into tiki_preferences values ('wiki_edit_section' ,'n') on duplicate key update value = 'n';
+
+insert into tiki_preferences values ('feature_bot_bar_rss' ,'n') on duplicate key update value = 'n';
