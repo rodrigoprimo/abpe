@@ -1,0 +1,11 @@
+--- templates/tiki-show_page.tpl	2011-02-15 15:20:14.944398008 -0200
++++ templates/tiki-show_page.tpl	2011-11-07 17:14:34.181866207 -0200
+@@ -164,7 +164,7 @@
+ {/strip}{/capture}
+ 
+ {* When editdate (authors + copyright + print_page) section is not empty show it *}
+-{if $smarty.capture.editdate_section neq ''}
++{if $smarty.capture.editdate_section neq '' && $user}
+ 	<p class="editdate">
+ 		{$smarty.capture.editdate_section}
+ 	</p>
