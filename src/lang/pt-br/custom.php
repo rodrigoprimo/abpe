@@ -42,6 +42,7 @@ $lang_custom = array(
 "Submit article" => "Enviar objeto",
 "View submissions" => "Ver objetos enviados",
 "New article" => "Novo objeto",
+"New Article" => "Novo objeto",
 "Send articles" => "Enviar objetos",
 "Received articles" => "Objetos recebidos",
 "Admin types" => "Administrar tipos de objetos",
