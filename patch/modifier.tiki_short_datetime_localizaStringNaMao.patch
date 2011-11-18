@@ -1,0 +1,11 @@
+--- lib/smarty_tiki/modifier.tiki_short_datetime.php	2011-06-03 11:14:26.609967642 -0300
++++ lib/smarty_tiki/modifier.tiki_short_datetime.php	2011-11-18 17:52:34.656774883 -0200
+@@ -20,7 +20,7 @@
+ 	
+ 	if( $same != 'n' && $prefs['tiki_same_day_time_only'] == 'y' && $date == smarty_modifier_tiki_date_format( time(), $prefs['short_date_format'] ) ) {
+ 		//tra('on') tra('on:') tra('at') tra('at:')
+-		return empty($intro)? $time: str_replace(array('on', 'On'), array('at', 'At'), $intro).' '.$time;
++		return empty($intro)? $time: tr(str_replace(array('on', 'On'), array('at', 'At'), $intro)) .' '.$time;
+ 	} else {
+ 		// if you change the separator do not forget to change the translation instruction in lib/prefs/short.php
+ 		$time = $date . ' ' . $time;
