@@ -1,34 +1,33 @@
 <?php
 
+require_once('lib/rss/rsslib.php');
+
 function wikiplugin_posts_help() {
         $help = tra("Includes blog posts listing into a wiki page");
         $help .= "<br />";
-        $help .= tra("~np~{POSTS(max=>5, blogId=>id)}{POSTS}~/np~");
+        $help .= tra("~np~{POSTS(max=>5, rssId=>id)}{POSTS}~/np~");
 
         return $help;
 }
 
-function wikiplugin_posts($data,$params) {
-	global $smarty, $prefs, $tiki_p_read_blog, $tikilib;
-	global $bloglib; require_once('lib/blogs/bloglib.php');
-	
-	extract($params,EXTR_SKIP);
-	if (($prefs['feature_blogs'] !=  'y') || ($tiki_p_read_blog != 'y')) {
-		// the feature is disabled or the user can't read blogs
-		return('');
-	}
-	if (!isset($blogId)) {
-	    return tra('blogId is mandatory');
-	}
-	if (!isset($max))
-	    $max='5';
+function wikiplugin_posts($data, $params) {
+	global $smarty, $prefs, $tikilib;
 
-	$blog = $bloglib->get_blog($blogId);
-        if (is_object($bloglib)) {
-            $posts = $bloglib->list_blog_posts($blogId, false, 0, $max);
-        }
+	if (isset($params['rssId'])) {
+		$rssId = $params['rssId'];
+	} else {
+		return tra('rssId is mandatory');
+	}
+	
+	$rsslib = new RssLib;
+		
+	$max = isset($params['max']) ? $params['max'] : 5;
+	
+	$blog = $rsslib->get_rss_module($rssId);
+	$items = $rsslib->get_feed_items($rssId, $max);
+
 	$smarty->assign('blog', $blog);
-	$smarty->assign('posts', $posts['data']);
-	return "~np~ ".$smarty->fetch('tiki-list_blog_posts.tpl')." ~/np~";
+	$smarty->assign('posts', $items);
+	return "~np~ ".$smarty->fetch('wiki-plugins/pe-rss_posts.tpl')." ~/np~";
 }
 ?>
