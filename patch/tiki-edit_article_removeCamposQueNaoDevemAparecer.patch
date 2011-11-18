@@ -1,0 +1,42 @@
+--- templates/tiki-edit_article.tpl	2010-11-30 16:18:24.887609000 -0200
++++ templates/tiki-edit_article.tpl	2011-11-10 18:28:23.395831668 -0200
+@@ -85,20 +85,6 @@
+ 			</td>
+ 		</tr>
+ 		<tr>
+-			<td>{tr}Topic{/tr}</td>
+-			<td>
+-				<select name="topicId">
+-					{section name=t loop=$topics}
+-						<option value="{$topics[t].topicId|escape}" {if $topicId eq $topics[t].topicId}selected="selected"{/if}>{$topics[t].name|escape}</option>
+-					{/section}
+-					<option value="" {if $topicId eq 0}selected="selected"{/if}>{tr}None{/tr}</option>
+-				</select>
+-				{if $tiki_p_admin_cms eq 'y'}
+-					<a href="tiki-admin_topics.php" class="link">{tr}Admin Topics{/tr}</a>
+-				{/if}
+-			</td>
+-		</tr>
+-		<tr>
+ 			<td>{tr}Type{/tr}</td>
+ 			<td>
+ 				<select id='articletype' name='type' onchange='javascript:chgArtType();'>
+@@ -106,9 +92,6 @@
+ 						<option value="{$typei|escape}" {if $type eq $typei}selected="selected"{/if}>{tr}{$typei|escape}{/tr}</option>
+ 					{/foreach}
+ 				</select>
+-				{if $tiki_p_admin_cms eq 'y'}
+-					<a href="tiki-article_types.php" class="link">{tr}Admin Types{/tr}</a>
+-				{/if}
+ 			</td>
+ 		</tr>
+ 		<tr id='use_ratings' {if $types.$type.use_ratings eq 'y'}style="display:;"{else}style="display:none;"{/if}>
+@@ -143,7 +126,6 @@
+ 			<td>
+ 				<input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+ 				<input name="userfile1" type="file" onchange="document.getElementById('useImage').checked = true;"/>
+-				{icon _id='help' alt="{tr}If not the topic image{/tr}"}
+ 			</td>
+ 		</tr>
+ 		{if $hasImage eq 'y'}
+
