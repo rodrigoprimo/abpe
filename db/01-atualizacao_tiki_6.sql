@@ -39,3 +39,6 @@ insert into tiki_preferences values ('feature_bot_bar_rss' ,'n') on duplicate ke
 insert into tiki_preferences values ('feature_contribution' ,'n') on duplicate key update value = 'n';
 
 insert into tiki_preferences values ('feature_listorphanPages' ,'y') on duplicate key update value = 'y';
+
+delete from tiki_menu_options where name = 'Admin Topics';
+delete from tiki_menu_options where name = 'Admin Types';
