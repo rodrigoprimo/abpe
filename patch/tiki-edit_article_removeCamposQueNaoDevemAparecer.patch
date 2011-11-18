@@ -1,5 +1,5 @@
 --- templates/tiki-edit_article.tpl	2010-11-30 16:18:24.887609000 -0200
-+++ templates/tiki-edit_article.tpl	2011-11-10 18:28:23.395831668 -0200
++++ templates/tiki-edit_article.tpl	2011-11-18 16:36:12.216553106 -0200
 @@ -85,20 +85,6 @@
  			</td>
  		</tr>
@@ -39,4 +39,16 @@
  			</td>
  		</tr>
  		{if $hasImage eq 'y'}
-
+@@ -170,12 +152,6 @@
+ 				<input type="checkbox" name="useImage" id="useImage" {if $useImage eq 'y'}checked='checked'{/if}/>
+ 			</td>
+ 		</tr>
+-		<tr id='show_image_3' {if $types.$type.show_image eq 'y'}style="display:;"{else}style="display:none;"{/if}>
+-			<td>{tr}Float text around image{/tr}</td>
+-			<td>
+-				<input type="checkbox" name="isfloat" {if $isfloat eq 'y'}checked='checked'{/if}/>
+-			</td>
+-		</tr>
+ 		<tr id='show_image_4' {if $types.$type.show_image eq 'y'}style="display:;"{else}style="display:none;"{/if}>
+ 			<td>{tr}View mode{/tr}</td>
+ 			<td>
