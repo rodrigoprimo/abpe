@@ -1,5 +1,5 @@
 <div class="box_blog">
-	<a href="{$blog.siteurl}">
+	<a href="{$blog.siteurl}" target="_blank">
 		<img src="styles/pe/blog.gif" border=0 >
 	</a>
 	<div id="conteudo">
