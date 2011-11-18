@@ -37,3 +37,5 @@ insert into tiki_preferences values ('wiki_edit_section' ,'n') on duplicate key 
 
 insert into tiki_preferences values ('feature_bot_bar_rss' ,'n') on duplicate key update value = 'n';
 insert into tiki_preferences values ('feature_contribution' ,'n') on duplicate key update value = 'n';
+
+insert into tiki_preferences values ('feature_listorphanPages' ,'y') on duplicate key update value = 'y';
