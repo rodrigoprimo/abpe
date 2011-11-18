@@ -121,5 +121,7 @@ $lang_custom = array(
 "Last Post" => "Últ. Mensg.",
 "Type" => "Tipo",
 "Powered by" => "| Provido por",
+"At:" => "Em:",
+"On:" => "Em:",
 );
 $lang = array_merge($lang, $lang_custom);
