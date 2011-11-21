@@ -42,3 +42,5 @@ insert into tiki_preferences values ('feature_listorphanPages' ,'y') on duplicat
 
 delete from tiki_menu_options where name = 'Admin Topics';
 delete from tiki_menu_options where name = 'Admin Types';
+
+insert into tiki_preferences values ('language' ,'pt-br') on duplicate key update value = 'pt-br';
