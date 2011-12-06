@@ -1,0 +1,54 @@
+--- ../tiki6/lib/wiki-plugins/wikiplugin_img.php	2011-04-26 10:31:38.902916001 -0300
++++ lib/wiki-plugins/wikiplugin_img.php	2011-12-06 20:07:11.228725567 -0200
+@@ -21,6 +21,7 @@
+ 				'description' => tra('Full URL to the image to display. "src", id", "fileId", "attId" or "randomGalleryId" required.'),
+ 				'filter' => 'url',
+ 				'default' => '',
++				'advanced' => true,
+ 			),
+ 			'id' => array(
+ 				'required' => false,
+@@ -28,6 +29,7 @@
+ 				'description' => tra('Numeric ID of an image in an Image Gallery (or list separated by commas or |).'),
+ 				'filter' => 'striptags',
+ 				'default' => '',
++				'advanced' => true,
+ 			),
+ 			'fileId' => array(
+ 				'required' => false,
+@@ -52,6 +54,7 @@
+ 				'description' => tra('Numeric ID of an image attached to a wiki page (or list separated by commas or |).'),
+ 				'filter' => 'striptags',
+ 				'default' => '',
++				'advanced' => true,
+ 			),
+ 			'thumb' => array(
+ 				'required' => false,
+@@ -79,10 +82,8 @@
+ 				'options' => array(
+ 					array('text' => tra('None'), 'value' => ''), 
+ 					array('text' => tra('Yes'), 'value' => 'y'), 
+-					array('text' => tra('Popup'), 'value' => 'popup', 'description' => tra('Full size image will open in a separate winow or tab (depending on browser settings) when thumbnail is clicked.')), 
+-					array('text' => tra('Browse'), 'value' => 'browse', 'description' => tra('Image gallery browse window for the image will open when the thumbnail is clicked if the image is in a Tiki image gallery')), 
+-					array('text' => tra('Browse Popup'), 'value' => 'browsepopup', 'description' => tra('Same as "browse" except that the page opens in a new window or tab.')), 
+ 					array('text' => tra('Download'), 'value' => 'download', 'description' => tra('Download dialog box will appear for file gallery and attachment images when thumbnail is clicked.')),
++				'advanced' => true,
+ 				),
+ 			),
+ 			'link' => array(
+@@ -97,7 +98,6 @@
+ 				'name' => tra('Link relation'),
+ 				'filter' => 'striptags',
+ 				'description' => tra('Enter "box" for colorbox effect (like shadowbox and lightbox) or appropriate syntax for link relation.'),
+-				'advanced' => true,
+ 				'default' => '',
+ 			),
+ 			'usemap' => array(
+@@ -128,6 +128,7 @@
+ 				'description' => tra('Maximum height or width in pixels (largest dimension is scaled). Overrides height and width settings.'),
+ 				'filter' => 'int',
+ 				'default' => '',
++				'advanced' => true,
+ 			),
+ 			'imalign' => array(
+ 				'required' => false,
