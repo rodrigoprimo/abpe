@@ -141,5 +141,6 @@ $lang_custom = array(
 "Thu" => "Qui",
 "Fri" => "Sex",
 "Sat" => "Sáb",
+"Link relation" => "Efeitos da imagem",
 );
 $lang = array_merge($lang, $lang_custom);
