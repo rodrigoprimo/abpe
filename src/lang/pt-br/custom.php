@@ -142,5 +142,7 @@ $lang_custom = array(
 "Fri" => "Sex",
 "Sat" => "Sáb",
 "Link relation" => "Efeitos da imagem",
+"Displays a link to a file (either from the file gallery or an attachment to a wiki page) and can display an image attachment. For more than one file from file galleries, or more optional information shown from the files, use the plugin FILES instead" => "Link para um arquivo em uma galeria de arquivos.",
+"Label for the link to the file" => "Nome usado para o link para o arquivo",
 );
 $lang = array_merge($lang, $lang_custom);
