@@ -1,4 +1,4 @@
-<div class="box_revista">
+<div class="box_revista box_home">
     <a href="tiki-view_articles.php?type=Revista">
         <img src="styles/pe/revista.gif" border="0">
     </a>

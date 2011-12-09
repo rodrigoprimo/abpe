@@ -28,6 +28,6 @@ function wikiplugin_posts($data, $params) {
 
 	$smarty->assign('blog', $blog);
 	$smarty->assign('posts', $items);
-	return "~np~ ".$smarty->fetch('wiki-plugins/pe-rss_posts.tpl')." ~/np~";
+	return "~np~ ".$smarty->fetch('pe-rss_posts.tpl')." ~/np~";
 }
 ?>

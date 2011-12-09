@@ -1,4 +1,4 @@
-<div class="box_artigos">
+<div class="box_artigos box_home">
 	<a href="tiki-view_articles.php?type=Artigo">
 		<img src="styles/pe/artigos.gif" border="0">
 	</a>

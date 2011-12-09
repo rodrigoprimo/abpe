@@ -1,4 +1,4 @@
-<div class="box_blog">
+<div class="box_blog box_home">
 	<a href="{$blog.siteurl}" target="_blank">
 		<img src="styles/pe/blog.gif" border=0 >
 	</a>
