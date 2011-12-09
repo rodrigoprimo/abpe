@@ -4,8 +4,17 @@
     	<img src="styles/pe/noticias.gif" border="0">
     </a>
 	<div id="conteudo">
-	  {foreach from=$items item=noticia}
-	    {$noticia.publishDate|date_format:"%d/%m"} <a href="tiki-read_article.php?articleId={$noticia.articleId}">{$noticia.title}</a><br />
-	  {/foreach}
+		{foreach from=$items item=noticia}
+			<div class="articletitle">
+				<span class="titlea"><a href="tiki-read_article.php?articleId={$noticia.articleId}">{$noticia.title|truncate:58}</a></span><br />
+				<div style="padding-top: 6px;>
+					<span class="titleb">
+						{$noticia.publishDate|tiki_short_date}&nbsp;
+						({$noticia.nbreads} {tr}Reads{/tr})
+					</span>
+				</div>
+				<br />
+			</div>
+		{/foreach}
 	</div>
 </div>

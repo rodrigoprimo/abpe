@@ -256,7 +256,11 @@ div.article #conteudo {
 
 .box_noticias #conteudo {
 	margin: -2px 0 0 12px;
-	width: 229px;
+	width: 270px;
+}
+
+.box_noticias div#conteudo span.titlea a, div.articletitle h2 a {
+	font-size: 15px;
 } 
 
 .box_blog #conteudo {
