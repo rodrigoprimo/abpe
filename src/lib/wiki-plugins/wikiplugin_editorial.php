@@ -24,7 +24,13 @@ function wikiplugin_editorial($data,$params) {
     $editorial = $list_articles['data'][0];
     $editorial['parsed_heading'] = $tikilib->parse_data($editorial['heading']);
     
-    $destaque = $tikilib->parse_data($data);
+    if (isset($params['destaque'])) {
+    	$destaque = $tikilib->parse_data($params['destaque']);
+    }
+    
+    if (isset($params['largura'])) {
+    	$smarty->assign('largura', $params['largura']);
+    }
 
     $smarty->assign('editorial', $editorial);
     $smarty->assign('destaque', $destaque);

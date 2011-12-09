@@ -22,8 +22,7 @@ function wikiplugin_artigo($data,$params) {
 
     $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y');
     $artigo = $list_articles['data'][0];
-    $artigo['parsed_heading'] = $tikilib->parse_data($artigo['heading']);
-    
+
     $smarty->assign('artigo', $artigo);
     return "~np~ ".$smarty->fetch('pe-view_artigo.tpl')." ~/np~";
 }

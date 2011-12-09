@@ -82,6 +82,7 @@ div#header-top {
 div#customcode {
 	margin-top: 21px;
 	background-color: white;
+	height: 129px;
 }
 
 img.logo {
@@ -247,36 +248,41 @@ div.article #conteudo {
 	font-size: 10px;
 }
 
-.box_noticias, .box_revista, .box_blog, .box_artigos {
+.box_noticias, .box_blog, .box_artigos {
 	width : 300px;
 	height : 130px;
 	line-height: 14px;
 }
 
-/* boxes da esquerda */
- 
-.box_noticias #conteudo, .box_blog #conteudo {
-	margin: -20px 0 0 12px;
+.box_noticias #conteudo {
+	margin: -2px 0 0 12px;
+	width: 229px;
+} 
+
+.box_blog #conteudo {
+	margin: 8px 0 0 12px;
 	width: 229px;
 }
 
-/* boxes da direita */
-
-.box_revista #conteudo, .box_artigos #conteudo {
-	margin: -20px 0 0 15px;
+.box_artigos #conteudo {
+	margin: 6px 0 0 15px;
 	width: 241px;
+}
+
+div#conteudo span.titlea a, div.articletitle h2 a {
+	line-height: 20px;
 }
 
 /* boxes cada um */
 
 .box_noticias {
-	float: left;
 	clear : both;
+	padding-top: 19px;
 }
 
-.box_revista {
+.box_video {
 	text-align : justify;
-	float: right;
+	margin-top: -48px;
 }
 
 .box_blog {
@@ -286,8 +292,8 @@ div.article #conteudo {
 
 .box_artigos {
 	text-align : justify;
-	float: right;
-	clear: right;
+	float: left;
+	clear: left;
 }
 
 .box_blog, .box_artigos {

@@ -3,11 +3,10 @@
 	<tr>
 		<td>
 
-
 <div class="editorial">
 	<div id="conteudo">
 		{if $editorial.hasImage eq 'y' && $editorial.useImage eq 'y'}
-			<a href="tiki-read_article.php?articleId={$editorial.articleId}"><img class="editorialimage" src="article_image.php?id={$editorial.articleId}" {if $editorial.image_x > 0} width="{$editorial.image_x}"{/if}{if $editorial.image_y > 0 } height="{$editorial.image_y}"{/if}/></a>
+			<a href="tiki-read_article.php?articleId={$editorial.articleId}"><img class="editorialimage" src="article_image.php?id={$editorial.articleId}{if $largura}&width={$largura}{elseif $editorial.image_x > 0}&width={$editorial.image_x}{/if}"/></a>
 		{/if}
 		<div class="articletitle">
 			<span class="titlea"><a href="tiki-read_article.php?articleId={$editorial.articleId}">{$editorial.title|truncate:58}</a></span><br />
