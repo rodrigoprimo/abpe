@@ -1,5 +1,5 @@
 <div class="box_artigos">
-	<a href="tiki-view_articles.php?type=Artigo">
+	<a href="artigo">
 		<img src="styles/pe/artigos.gif" border="0">
 	</a>
 	<div id="conteudo">

@@ -1,6 +1,6 @@
 
 <div class="box_noticias box_home">
-	<a href="tiki-view_articles.php?type=Notícia">
+	<a href="noticia">
     	<img src="styles/pe/noticias.gif" border="0">
     </a>
 	<div id="conteudo">
