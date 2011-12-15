@@ -8,7 +8,7 @@
 {elseif $prefs.language eq 'en'}
 	<img class='logo' src='styles/pe/logos/logo_en.png' />
 {elseif $prefs.language eq 'eo'}
-	<img class='logo' src='styles/pe/logos/logo_eo.jpg' />
+	<img class='logo' src='styles/pe/logos/logo_eo.png' />
 {/if}
 
 <div id=menu>

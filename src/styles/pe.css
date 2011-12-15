@@ -71,6 +71,7 @@ div#main {
 	margin: auto;
 	width: 780px;
 	border: 0px !important;
+	min-height: 930px;
 }
 
 div#header-top {
