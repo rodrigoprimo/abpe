@@ -49,6 +49,7 @@ RewriteRule ^revista$             tiki-view_articles.php?type=revista      [L]
 RewriteRule ^artigo$              tiki-view_articles.php?type=artigo       [L]
 RewriteRule ^editorial$           tiki-view_articles.php?type=editorial    [L]
 RewriteRule ^noticia$             tiki-view_articles.php?type=noticia      [L]
+RewriteRule ^video$               tiki-view_articles.php?type=video        [L]
 
 #If your website is a checkout
 RewriteRule	^\.svn/	-	[F,L]

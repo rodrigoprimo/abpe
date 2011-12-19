@@ -485,7 +485,7 @@ a.phplm:hover, .phplmnormal a:hover {
 	background-color: #90278e;
 }
 
-.icone_ativo#icone3  {
+.icone_ativo#icone3 a {
 	background-color: #fca263;
 }
 
@@ -510,6 +510,10 @@ a.phplm:hover, .phplmnormal a:hover {
 }
 
 .icone_ativo#icone9 a {
+	background-color: #00a69c;
+}
+
+.icone_ativo#icone10 a {
 	background-color: #00685B;
 }
 
@@ -548,6 +552,10 @@ a.phplm:hover, .phplmnormal a:hover {
 	background-image:url(pe/menu/11.gif);
 }
 #icone9 a {
+	background-image:url(pe/menu/12.gif);
+}
+
+#icone10 a {
 	background-image:url(pe/menu/0.gif);
 }
 

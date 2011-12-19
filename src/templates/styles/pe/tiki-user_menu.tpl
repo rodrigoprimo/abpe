@@ -91,7 +91,7 @@
 {/if}
 {* ----------------------------- option *}
 {elseif $chdata.type eq 'o'}
-<div class="option{$sep}{if isset($chdata.selected) and $chdata.selected} selected{/if} {if $menu_info.menuId eq '43'} icone{if isset($nomepagina) and $nomepagina eq $chdata.url}_ativo{/if}" id="icone{$i++}"{if $i==10}{assign var=i value='0'}{/if}{else}"{/if}">
+<div class="option{$sep}{if isset($chdata.selected) and $chdata.selected} selected{/if} {if $menu_info.menuId eq '43'} icone{if isset($nomepagina) and $nomepagina eq $chdata.url}_ativo{/if}" id="icone{$i++}"{if $i==11}{assign var=i value='0'}{/if}{else}"{/if}">
 	<a href="{if $prefs.feature_sefurl eq 'y' and !empty($chdata.sefurl)}{$chdata.sefurl|escape}{else}{if $prefs.menus_item_names_raw eq 'n'}{$chdata.url|escape}{else}{$chdata.url}{/if}{/if}" class="linkmenu">
 		{if $prefs.menus_items_icons eq 'y' and $menu_info.use_items_icons eq 'y' and ($opensec eq 0 or $chdata.icon neq '')}
 			{icon _id=$chdata.icon alt='' _defaultdir=$prefs.menus_items_icons_path}
