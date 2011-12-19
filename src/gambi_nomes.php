@@ -20,5 +20,6 @@ if (file_exists($filepath)) {
 	$imagemLogoTopo = 'logo.jpg';
 }
 
+$smarty->assign('nomepagina', $nomepagina);
 $smarty->assign('imagemLogoTopo', $imagemLogoTopo);
 ?>
