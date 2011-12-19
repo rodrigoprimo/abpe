@@ -144,5 +144,7 @@ $lang_custom = array(
 "Link relation" => "Efeitos da imagem",
 "Displays a link to a file (either from the file gallery or an attachment to a wiki page) and can display an image attachment. For more than one file from file galleries, or more optional information shown from the files, use the plugin FILES instead" => "Link para um arquivo em uma galeria de arquivos.",
 "Label for the link to the file" => "Nome usado para o link para o arquivo",
+"No articles yet" => "Sem nenhum objeto",
+"Add an article" => "Clique aqui para adicionar um objeto",
 );
 $lang = array_merge($lang, $lang_custom);
