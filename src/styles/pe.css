@@ -517,6 +517,10 @@ a.phplm:hover, .phplmnormal a:hover {
 	background-color: #00685B;
 }
 
+.icone_ativo#icone11 a {
+	background-color: #ec1c24;
+}
+
 #icone0 a {
 	background-image:url(pe/menu/1.gif);
 }
@@ -557,6 +561,10 @@ a.phplm:hover, .phplmnormal a:hover {
 
 #icone10 a {
 	background-image:url(pe/menu/0.gif);
+}
+
+#icone11 a {
+	background-image:url(pe/menu/4.gif);
 }
 
 div.box-search_new h3, div.box-Banners h3 {
