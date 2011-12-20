@@ -1,0 +1,16 @@
+--- lib/jquery/jquery-validate/jquery.validate.js	2010-08-03 19:43:05.263391748 -0300
++++ lib/jquery/jquery-validate/jquery.validate.js	2011-12-20 11:00:16.573977973 -0200
+@@ -254,10 +254,10 @@
+ 	},
+ 
+ 	messages: {
+-		required: "This field is required.",
++		required: "Esse campo é obrigatório.",
+ 		remote: "Please fix this field.",
+-		email: "Please enter a valid email address.",
+-		url: "Please enter a valid URL.",
++		email: "Endereço de e-mail inválido.",
++		url: "URL inválida.",
+ 		date: "Please enter a valid date.",
+ 		dateISO: "Please enter a valid date (ISO).",
+ 		number: "Please enter a valid number.",
