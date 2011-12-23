@@ -9,7 +9,8 @@ function wikiplugin_video_help() {
 function wikiplugin_video($data, $params) {
 	global $artlib, $tikilib;
 	
-	$list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, 'video', '', 'y');
+	$list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, 'video', '', 'y',
+		'', '', '', '', '', '', '', false, 'y');
 	$article = $list_articles['data'][0];
 	
 	$plugins = array();

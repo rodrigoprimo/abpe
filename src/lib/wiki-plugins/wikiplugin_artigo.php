@@ -20,7 +20,8 @@ function wikiplugin_artigo($data,$params) {
 
     $type='artigo';
 
-    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y');
+    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y',
+    	'', '', '', '', '', '', '', false, 'y');
     $artigo = $list_articles['data'][0];
 
     $smarty->assign('artigo', $artigo);

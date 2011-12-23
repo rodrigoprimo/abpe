@@ -21,7 +21,8 @@ function wikiplugin_noticia($data,$params) {
     $tipo = 'noticia';
 
     //TODO: verificar se nao tem uma funcao que pega soh o titulo, a data e o id dos artigos para nao precisar pegar tudo
-    $list_articles = $artlib->list_articles(0, 3, 'publishDate_desc', '', 0, $tikilib->now, false, $tipo, '', 'y');
+    $list_articles = $artlib->list_articles(0, 3, 'publishDate_desc', '', 0, $tikilib->now, false, $tipo, '', 'y',
+    	'', '', '', '', '', '', '', false, 'y');
     $items = $list_articles['data'];
     $i = 0;
     foreach ($items as $item) {

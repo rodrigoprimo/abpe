@@ -20,7 +20,8 @@ function wikiplugin_revista($data,$params) {
 
     $type='revista';
 
-    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y');
+    $list_articles = $artlib->list_articles(0, 1, 'publishDate_desc', '', 0, $tikilib->now, false, $type, '', 'y',
+    	'', '', '', '', '', '', '', false, 'y');
     $revista = $list_articles['data'][0];
     $revista['parsed_heading'] = $tikilib->parse_data($revista['heading']);
     
